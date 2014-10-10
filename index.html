@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Matthew Ross">
+        <meta name="description" content="A Kanban-inspired app for keeping track of things that need to get done.">
+
+        <title>TaskBoard</title>
+
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Pontano+Sans|Raleway:500">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css">
+        <link rel="stylesheet" href="css/styles.css">
+
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <a href="https://github.com/kiswa/TaskBoard" target="forkme"><img class="fork-me" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">TaskBoard</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li class="dropdown">
+                        <a href="docs/" class="dropdown-toggle" data-toggle="dropdown">Documentation <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="docs/"><strong>Quick Start</strong></a></li>
+                            <li class="divider"></li>
+                            <li><a href="docs/intro.html">Introduction</a></li>
+                            <li><a href="docs/settings.html">Settings</a></li>
+                            <li><a href="docs/boards.html">Boards</a></li>
+                            <li><a href="docs/items.html">Items</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="download.html">Download</a></li>
+                    <li><a href="demo.html">Demo</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="text-center">TaskBoard
+                        <span class="small">A simple, visual way to keep track of what needs to get done</span>
+                    </h1>
+                    <p class="text-center">
+                        <img src="images/board.png" class="img-responsive inline" title="TaskBoard">
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h2>About</h2>
+                    <p>A <a href="http://en.wikipedia.org/wiki/Kanban_board" target="wikipedia">Kanban</a>-inspired app for keeping track of things that need to get done.</p>
+                    <p>The goal of TaskBoard is to provide a simple and clean interface to a functional and minimal application for keeping track of tasks.
+                       It's not trying to be the next Trello or LeanKit.</p>
+                    <p>What TaskBoard does is make it easy to start keeping track of anything you need to get done. The visual aspect of a board allows for easy status checks, and can be motivating for users who want to move their tasks to the next lane.</p>
+                    <h4>Like TaskBoard?</h4>
+                    <p>Anything you can share helps with the continued development of TaskBoard.</p>
+                    <div class="col-md-6 text-center">
+                        Support via PayPal
+                    </div>
+                    <div class="col-md-6 text-center">
+                        or Gratipay
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <form id="paypal_support" class="form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="hidden" name="hosted_button_id" value="6EWZZ9FGJ3J6Y">
+                            <input type="hidden" name="on0" value="Support Me With">
+                            <input type="hidden" name="currency_code" value="USD">
+                            <div class="form-group">
+                                <select class="form-control" name="os0" id="payment_options">
+                                    <option value="Thanks!">Thanks! $1.00 USD</option>
+                                    <option value="Thanks a lot!">Thanks a lot! $5.00 USD</option>
+                                    <option value="Thanks a bunch!">Thanks a bunch! $10.00 USD</option>
+                                    <option value="Thanks so much!">Thanks so much! $20.00 USD</option>
+                                    <option value="Wow, thank you!">Wow, thank you! $50.00 USD</option>
+                                    <option value="Thanks, you're awesome!">Thanks, you're awesome! $100.00 USD</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-primary" name="submit" title="PayPal - The safer, easier way to pay online!">
+                                PayPal <span class="fa fa-paypal"></span>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <p class="gratipay">Any Amount</p>
+                        <a href="https://gratipay.com/kiswa/" class="btn btn-primary">Gratipay <span class="fa fa-gittip"></span></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2>Features</h2>
+                    <ul>
+                        <li>Free, Open-Source (<a href="http://opensource.org/licenses/mit-license.html" target="license">MIT License</a>), and Self-Hosted</li>
+                        <li>Easy install - just copy to web host and go!</li>
+                        <li>Unlimited boards (projects)</li>
+                        <li>Customize lanes within boards and persistent expand/collapse per user</li>
+                        <li>Items allow custom colors, categorization, Markdown descriptions, attachments, and comments</li>
+                        <li>Items display complete history of activities</li>
+                        <li>Full history of all board activity for admins</li>
+                        <li>Easy customization</li>
+                        <li>Basic User management (admin, and regular users)</li>
+                        <li>No external dependencies</li>
+                        <li>Creates SQLite database on first use</li>
+                        <li>RESTful API</li>
+                        <li>Works on almost any web host (only needs PHP5 w/SQLite pdo)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Thanks</h2>
+                    <p>Without the following open-source projects, TaskBoard would have been much more difficult to create:</p>
+                    <div class="col-md-6">
+                        <h4>Front end</h4>
+                        <div class="col-md-6 list-group">
+                            <a class="list-group-item" href="https://angularjs.org/" target="outLink">AngularJS</a>
+                            <a class="list-group-item" href="http://getbootstrap.com/" target="outLink">Bootstrap</a>
+                            <a class="list-group-item" href="https://github.com/chjj/marked" target="outLink">marked</a>
+                            <a class="list-group-item" href="https://github.com/ianwalter/ng-context-menu" target="outLink">ng-context-menu</a>
+                        </div>
+                        <div class="col-md-6 list-group">
+                            <a class="list-group-item" href="https://jqueryui.com/datepicker/" target="outLink">jQuery UI Datepicker</a>
+                            <a class="list-group-item" href="https://bgrins.github.io/spectrum/" target="outLink">Spectrum</a>
+                            <a class="list-group-item" href="http://ned.im/noty/" target="outLink">(noty)</a>
+                            <a class="list-group-item" href="https://leaverou.github.io/prefixfree/" target="outLink">-prefix-free</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Back end (RESTful API)</h4>
+                        <div class="list-group">
+                            <a class="list-group-item" href="http://www.slimframework.com/" target="outLink">Slim Framework</a>
+                            <a class="list-group-item" href="http://www.redbeanphp.com/" target="outLink">RedBeanPHP</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p class="small text-center">Copyright &copy; 2014 Matthew Ross</p>
+        </div>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-55485826-1', 'auto');
+            ga('require', 'displayfeatures');
+            ga('require', 'linkid', 'linkid.js');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>

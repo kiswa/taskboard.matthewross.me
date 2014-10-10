@@ -1,0 +1,99 @@
+body {
+    background: url(../images/bg.png);
+    font-family: "Pontano Sans", sans-serif;
+    font-size: 12pt;
+    padding-top: 70px;
+}
+th, h1, h2, h3, h4, h5, h6, #board-nav a {
+    font-family: "Raleway";
+    font-weight: 500;
+}
+a, button {
+    transition: background-color 0.3s, color 0.3s;
+}
+.navbar-nav > li > a {
+    color: #428bca !important;
+}
+.navbar-nav > li > a:hover {
+    color: #2a6496 !important;
+}
+li.active > a {
+    cursor: default;
+}
+
+p.gratipay {
+    padding: 10px;
+}
+
+.fork-me {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+    z-index: 2000;
+}
+
+.navbar {
+    background: #fff;
+    border-bottom: #ccc 1px solid;
+}
+
+.container {
+    background: #fff;
+    border-radius: 7px;
+    border: #ccc 1px solid;
+}
+.container img {
+    box-shadow: 0 0 15px 3px rgba(51, 51, 51, .3);
+    margin-top: 1em;
+}
+h1 span {
+    display: block;
+}
+.caption {
+    margin-top: 10px;
+    font-weight: bold;
+}
+.note {
+    display: block;
+    font-weight: bold;
+}
+.note:before {
+    content: 'Note: ';
+}
+.inline {
+    display: inline !important;
+}
+
+#image-popup {
+    cursor: pointer;
+    background: #fff;
+    padding: 25px;
+    padding-bottom: 0;
+    border-radius: 5px;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    border: #ccc 1px solid;
+    box-shadow: 0 0 15px 3px rgba(51, 51, 51, .2);
+}
+#image-popup img {
+    border: #ccc 1px solid;
+}
+#image-popup p {
+    margin-top: 10px;
+    padding-top: 5px;
+    border-top: #ccc 1px solid;
+    font-weight: bold;
+}
+#image-popup p span {
+    display: block;
+    font-weight: normal;
+    font-size: 91%;
+}
+
+.dropdown-toggle {
+    cursor: default;
+}

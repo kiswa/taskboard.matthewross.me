@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Matthew Ross">
+        <meta name="description" content="A Kanban-inspired app for keeping track of things that need to get done.">
+
+        <title>TaskBoard Docs - Quick Start</title>
+
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Pontano+Sans|Raleway:500">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css">
+        <link rel="stylesheet" href="../css/styles.css">
+
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div id="image-popup" class="hidden"></div>
+        <a href="https://github.com/kiswa/TaskBoard" target="forkme"><img class="fork-me" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">TaskBoard</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li class="dropdown active">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">Documentation <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="active"><a href=""><strong>Quick Start</strong></a></li>
+                            <li class="divider"></li>
+                            <li><a href="intro.html">Introduction</a></li>
+                            <li><a href="settings.html">Settings</a></li>
+                            <li><a href="boards.html">Boards</a></li>
+                            <li><a href="items.html">Items</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../download.html">Download</a></li>
+                    <li><a href="../demo.html">Demo</a></li>
+                    <li class="dropdown" id="contents">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">Page Contents <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#install">Install</a></li>
+                            <li><a href="#firstUse">First Use</a></li>
+                            <li><a href="#boardsItems">Boards &amp; Items</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <h1>Quick Start</h1>
+            <h2>Install<a name="install"></a></h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Once you've downloaded TaskBoard, getting it running is very simple.</p>
+                    <ol>
+                        <li>Copy the folders and files (you can skip the .hg* stuff) to the location you want to use TaskBoard.</li>
+                        <li>
+                            <strong>Optional:</strong> Minify everything for better performance in production. (Requires that everything but <code>compiler.jar</code> in <code>build/</code> is executable.)
+                            <ul>
+                                <li>Open the TaskBoard directory in a terminal</li>
+                                <li>Run <code>./build/build-all</code></li>
+                            </ul>
+                        </li>
+                        <li>Open your browser to the location you put TaskBoard and log into the site with the username <code>admin</code> and password <code>admin</code>.</li>
+                    </ol>
+                    <p class="note">Ensure the <code>api</code> directory is writable so the back end can do its job.</p>
+                    <p>That's all there is to it! If you have any troubles, <a href="https://github.com/kiswa/TaskBoard/issues">post an issue</a> and I'll help if I can.</p>
+
+                </div>
+            </div>
+            <h2>First Use<a name="firstUse"></a></h2>
+            <div class="row">
+                <div class="col-sm-8">
+                    <h3>Log In</h3>
+                    <p>When you log into TaskBoard, you are taken to the Boards page. Since this is your first login, TaskBoard reminds you to go to Settings and create your first board. It also reminds you to change your password from the default. This should be the first thing you do.</p>
+                    <p>Go to Settings from either the link in the white content area, or the navigation button at the top right.</p>
+                    <p>On future logins, this will either give you a list of available boards or take you to your default board.</p>
+                </div>
+                <div class="col-sm-4">
+                    <a href="images/first-login.png" data-caption="TaskBoard after first login." class="popup-image"><img src="images/first-login.png" title="First Login" class="img-responsive"></a>
+                </div>
+                <div class="clearfix">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8">
+                    <h3>Settings</h3>
+                    <p>After navigating to the Settings page, use the Change Password form to update your password. TaskBoard only has one restriction on passwords; they may not be empty.</p>
+                    <p>From this same User Settings section, you may also change your username and add additional users. We'll get to that in a minute.</p>
+                    <p>You can't select a default board however, because we haven't create one.</p>
+                </div>
+                <div class="col-sm-4">
+                    <a href="images/settings.png" data-caption="The initial Settings page." class="popup-image"><img src="images/settings.png" title="Settings" class="img-responsive"></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8">
+                    <h3>Create a Board</h3>
+                    <p>Click the Add Board button to open the modal dialog for creating a new board.</p>
+                    <p>There are only two requirements to create a new board. It must have a Name, and it must have at least one Lane. Categories are optional, but they can be helpful!</p>
+                    <p>The Select Users section isn't useful at this point, but when there are multiple users, you may select which have access to the board here.<span class="small note">Admin users always have access to all boards whether they are selected here or not.</span></p>
+                    <p>Click the Add Board button on the dialog when you have your first board the way you want. You are returned to the Settings page assuming the two requirements for creating a board were met.</p>
+                    <p>Notice the Settings page now has your board listed in the Board Settings section. Clicking the link in the Name column takes you to the board.</p>
+                    <p>Since you are logged in as an admin user, you also have two icons in the Actions column. The first (<span class="fa fa-edit"></span>) allows you to edit the board (using a modal much like the Add Board dialog). The second (<span class="fa fa-trash-o"></span>) allows you to delete a board. Be careful when deleting a board as it cannot be undone!</p>
+                </div>
+                <div class="col-sm-4">
+                    <a href="images/first-board.png" data-caption="Creating your first board." class="popup-image"><img src="images/first-board.png" title="First Board" class="img-responsive"></a>
+                    <a href="images/board-created.png" data-caption="First board created." class="popup-image"><img src="images/board-created.png" title="First Board Created" class="img-responsive"></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8">
+                    <h3>Add a User</h3>
+                    <p>Click the Add User button to open a modal dialog for creating a new user.</p>
+                    <p>Enter the username you want to use, keeping in mind that duplicate usernames are not allowed, then set a password and verify it in the next two fields.</p>
+                    <p>At this point you may also select a default board for the user. Doing this automatically adds the user to that board.<span class="small note">If you do not assign a default board, you will need to edit whatever boards you want the user to have access to and add them.</span></p>
+                    <p>The last option is whether or not the new user is an administrator. By default, this is not checked.</p>
+                    <p>Now that we've covered the main features of the Settings page, let's take a look at that board.</p>
+                    <p>You can either click the direct link in the Board Settings section, or use the navigation button in the top right to be taken to your default board (or a list of boards if you did not choose a default).</p>
+                </div>
+                <div class="col-sm-4">
+                    <a href="images/add-user.png" data-caption="Adding a user." class="popup-image"><img src="images/add-user.png" title="Add User" class="img-responsive"></a>
+                    <a href="images/user-added.png" data-caption="New user added." class="popup-image"><img src="images/user-added.png" title="New User Added" class="img-responsive"></a>
+                </div>
+            </div>
+            <h2>Boards &amp; Items<a name="boardsItems"></a></h2>
+            <div class="row">
+                <div class="col-sm-8">
+                    <h3>Board Overview</h3>
+                    <p>There are a few things to note on the board page. There is a board navigation section which includes a board selector on the left, and filters for the current board on the right.</p>
+                    <p>The filters allow for finer grain detail on board items. For example, if a user wants to see only those items assigned to them, they can select their username from the User Filter dropdown.<span class="small note">If you did not add any categories when you created the board, the Category Filter dropdown will not be visible.</span></p>
+                    <p>Each lane in the board is displayed in the main area of the page. Lanes may be expanded and collapsed and the setting will persist for each user across logins. When a lane is collapsed it has a badge showing the number of items contained within.</p>
+                </div>
+                <div class="col-sm-4">
+                    <a href="images/boards.png" data-caption="An empty board." class="popup-image"><img src="images/boards.png" title="Empty Board" class="img-responsive"></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8">
+                    <h3>Adding an Item</h3>
+                    <p>There are two ways to add an item to a lane. Either click the plus button or right-click in the lane where you want to add an item and select Add Item from the context menu. However you choose, you will get an Add Item modal dialog that has the Lane dropdown defaulted to the one you acted from.</p>
+                    <p>When adding an item, the only requirement is that it have a Title.</p>
+                    <p>The Description text can be entered as <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#table-of-contents" target="markdown">Markdown</a> for better readability. This allows for lists, formatting, code display, tables, and much more.</p>
+                    <p>The Assigned To dropdown lets you choose a user to have the item assigned to them. The Category dropdown will only be visible if categories were added to the board, and allows for clearer visibility of item types.</p>
+                    <p>You can change the lane the item will be created in (in case you clicked whichever lane was nearest) from the Lane dropdown.</p>
+                    <p>The Color input displays a colorpicker that stores the colors you've used in your browser for future use. It also allows manual entry of colors.</p>
+                    <p>The Date Due input displays a standard datepicker, which should be familiar to most users.</p>
+                    <p>And finally, the Points input is meant to be used to provide an estimate for the level of work required for the item.</p>
+                </div>
+                <div class="col-sm-4">
+                    <a href="images/add-item.png" data-caption="Adding an item to a lane." class="popup-image"><img src="images/add-item.png" title="Add Item" class="img-responsive"></a>
+                    <a href="images/item-added.png" data-caption="A newly added item." class="popup-image"><img src="images/item-added.png" title="Item Added" class="img-responsive"></a>
+                </div>
+            </div>
+            <h2>More Detail</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Now you know enough to get going with TaskBoard. If you'd like more information, including working with Items, take a look through <a href="intro.html">the detailed docs</a>.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p class="small text-center">Copyright &copy; 2014 Matthew Ross</p>
+        </div>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-55485826-1', 'auto');
+            ga('require', 'displayfeatures');
+            ga('require', 'linkid', 'linkid.js');
+            ga('send', 'pageview');
+        </script>
+        <script src="js/images.js"></script>
+    </body>
+</html>
