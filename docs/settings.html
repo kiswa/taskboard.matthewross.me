@@ -59,6 +59,7 @@
                             <li><a href="#usersTable">TaskBoard Users Table</a></li>
                             <li><a href="#board">Board Settings</a></li>
                             <li><a href="#addBoard">Add Board</a></li>
+                            <li><a href="#autoActions">Automatic Actions</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -71,7 +72,7 @@
                     <h3>Overview<a name="overview"></a></h3>
                     <p>The settings page is where you manage users and boards. For admin users, there is also an Activity Log that provides a view of actions that have taken place in your TaskBoard install.</p>
                     <p>Standard users can use Settings to change their password, select a default board, and change their username. They will also see a list of users, and a list of their boards.</p>
-                    <p>Admin users get that and more. They are able to add, edit, and remove users and boards, and view the Activity Log.</p>
+                    <p>Admin users get that and more. They are able to add, edit, and remove users and boards, and view the Activity Log. They also have the ability to add and remove Automatic Actions which allows for automated changes to items that meet specific criteria.</p>
                 </div>
                 <div class="col-sm-4">
                     <a href="images/settings-standard.png" data-caption="Settings for a standard user." class="popup-image"><img src="images/settings-standard.png" title="Settings" class="img-responsive"></a>
@@ -153,10 +154,25 @@
                     <a href="images/first-board.png" data-caption="Adding a board." class="popup-image"><img src="images/first-board.png" title="Adding a Board" class="img-responsive"></a>
                 </div>
             </div>
+            <h2>Automatic Actions<a name="autoActions"></a></h2>
+            <div class="row">
+                <div class="col-sm-8">
+                    <p>Automatic actions are a way to have items update automatically when specific criteria are met. All users see a list of automatic actions that are currently available. Admin users also see the Add Action section that allows creation of a new automatic action.</p>
+                    <p>The current implementation allows you to choose from three triggers for an item: moving to a lane, assignee change, and category change. There are four actions that can occur, however not all actions are available to each trigger. The actions that can run against an item are: set color, set category, set assignee, clear due date.</p>
+                    <p>The idea is that you can have things taken care of by TaskBoard. For example, say you use the Date Due to track active items; you can setup an automatic action to clear the due date when an item is moved into the Done column.</p>
+                    <p>If you have ideas for improving the options, <a href="https://github.com/kiswa/TaskBoard/issues">post an issue</a> for consideration!</p>
+                    <h3>Add Action</h3>
+                    <p>To add a new automatic action, start by selecting a board from the dropdown. Next, select a trigger and the trigger detail from the center column dropdowns. Finally, select an action and the action detail from the right column dropdowns. <span class="small note">If "Clear item due date" is selected as the action, there is no action detail.</span></p>
+                </div>
+                <div class="col-sm-4">
+                    <a href="images/auto-actions.png" data-caption="The Automatic Actions section." class="popup-image"><img src="images/auto-actions.png" title="Automatic Actions" class="img-responsive"></a>
+                    <a href="images/auto-actions-admin.png" data-caption="The Automatic Actions section for admins." class="popup-image"><img src="images/auto-actions-admin.png" title="Automatic Actions" class="img-responsive"></a>
+                </div>
+            </div>
             <h2>Next Steps</h2>
             <div class="row">
                 <div class="col-md-12">
-                    <p>Let's get some more details about <a href="boards.html">working within a board</a> now.</p>
+                    <p>Let's get some more details about <a href="boards.html">working within a board</a>.</p>
                 </div>
             </div>
         </div>
