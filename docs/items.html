@@ -55,8 +55,8 @@
                         <a class="dropdown-toggle" data-toggle="dropdown">Page Contents <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#adding">Adding</a></li>
-                            <li><a href="#position">Lane Position</a></li>
-                            <li><a href="#lane">Lane View</a></li>
+                            <li><a href="#position">Column Position</a></li>
+                            <li><a href="#column">Column View</a></li>
                             <li><a href="#context">Context Menu</a></li>
                             <li><a href="#detail">Detail View</a></li>
                         </ul>
@@ -69,46 +69,46 @@
             <div class="row">
                 <div class="col-sm-8">
                     <h3>Adding<a name="adding"></a></h3>
-                    <p>There are two ways to add an item to a lane. Either click the plus button (which will always be at the right, below any items) or right-click in the lane and use the context menu.</p>
-                    <p>However you choose to add an item, you will get an Add Item modal dialog that has the Lane dropdown defaulted to the one you acted from.</p>
+                    <p>There are two ways to add an item to a column. Either click the plus button (which will always be at the right, below any items) or right-click in the column and use the context menu.</p>
+                    <p>However you choose to add an item, you will get an Add Item modal dialog that has the Column dropdown defaulted to the one you acted from.</p>
                     <p>When adding an item, the only requirement is that it have a Title.</p>
                     <p>The Description text can be entered as <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#table-of-contents" target="markdown">Markdown</a> for better readability and detail. This allows for lists, formatting, code display, tables, and much more.</p>
                     <p>The Assigned To dropdown lets you choose a user to have the item assigned to them. The Category dropdown will only be visible if categories were added to the board, and allows for clearer visibility of item types.</p>
-                    <p>You can change the lane the item will be created in (in case you changed your mind) from the Lane dropdown.</p>
+                    <p>You can change the column the item will be created in (in case you changed your mind) from the Column dropdown.</p>
                     <p>The Color input displays a colorpicker that stores the colors you've used in your browser for future use. It also allows manual entry of colors.</p>
                     <p>The Date Due input displays a standard datepicker, which should be familiar to most users.</p>
                     <p>And finally, the Points input is meant to be used to provide an estimate for the level of work required for the item.</p>
                 </div>
                 <div class="col-sm-4">
-                    <a href="images/add-item.png" data-caption="Adding an item to a lane." class="popup-image"><img src="images/add-item.png" title="Add Item" class="img-responsive"></a>
+                    <a href="images/add-item.png" data-caption="Adding an item to a column." class="popup-image"><img src="images/add-item.png" title="Add Item" class="img-responsive"></a>
                     <a href="images/item-added.png" data-caption="A newly added item." class="popup-image"><img src="images/item-added.png" title="Item Added" class="img-responsive"></a>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-8">
-                    <h3>Lane Position<a name="position"></a></h3>
-                    <p>Items are initially displayed on the board in the order they were added to a lane. However, you can re-order items by dragging and dropping them into a new position. You can also drag and drop to move an item into a new lane (this will also set its position within the new lane).</p>
-                    <p class="small note">The activity history for an item does not show position changes. However, lane changes are recorded.</p>
+                    <h3>Column Position<a name="position"></a></h3>
+                    <p>Items are initially displayed on the board in the order they were added to a column. However, you can re-order items by dragging and dropping them into a new position. You can also drag and drop to move an item into a new column (this will also set its position within the new column).</p>
+                    <p class="small note">The activity history for an item does not show position changes. However, column changes are recorded.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-8">
-                    <h3>Lane View<a name="lane"></a></h3>
-                    <p>When viewing items in lanes, each item has three main sections that provide useful details at a glance.</p>
+                    <h3>Column View<a name="column"></a></h3>
+                    <p>When viewing items in columns, each item has three main sections that provide useful details at a glance.</p>
                     <p>In the header is the item's name and points are displayed in a badge on the far right (if there are any points).</p>
                     <p>Below the header is the item's description. This area does allow you to view the full description, however the maximum height of an item is limited so there will be scrolling involved for more than about a dozen lines.</p>
                     <p>The bottom section of an item displays the assignee on the left (or "Unassigned") with item details on the right. If there are comments, a speech bubble icon (<span class="fa fa-comments-o"></span>) is seen. If there are attachments, a paperclip icon (<span class="fa fa-paperclip"></span>) will show. Hovering the mouse over either icon will give you a count of the comments or attachments.</p>
                     <p>If a due date has been assigned, it is displayed on the far right. And if there are categories, the assigned category (or "Uncategorized") is at the bottom right.</p>
                 </div>
                 <div class="col-sm-4">
-                    <a href="images/item-lane-view.png" data-caption="Item view in a lane." class="popup-image"><img src="images/item-lane-view.png" title="Item Lane View" class="img-responsive"></a>
+                    <a href="images/item-lane-view.png" data-caption="Item view in a column." class="popup-image"><img src="images/item-lane-view.png" title="Item Column View" class="img-responsive"></a>
                     <a href="images/item-comments-hover.png" data-caption="Item comments count on hover." class="popup-image"><img src="images/item-comments-hover.png" title="Item Comments Count" class="img-responsive"></a>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-8">
                     <h3>Context Menu<a name="context"></a></h3>
-                    <p>Items in a lane have a right-click context menu. For standard users, this menu has options for View Item, Edit Item and Add New Item.</p>
+                    <p>Items in a column have a right-click context menu. For standard users, this menu has options for View Item, Edit Item and Add New Item.</p>
                     <p>For admin users, there is an additional Delete Item option. Deleting an item cannot be undone, so take care when using this feature. You will be asked to confirm deletion.</p>
                     <p>The Edit Item option opens a dialog much like the Add Item dialog. However, it is filled with the information from the item you right-clicked for editing.</p>
                     <p>The View Item option opens the item Detail View.</p>
@@ -123,7 +123,7 @@
                     <h3>Detail View<a name="detail"></a></h3>
                     <p>To get a larger view of an item, as well as see its complete history, simply double-click the item or right-click and choose View Item from the context menu.</p>
                     <p>All activity on an item is displayed in a slide-out menu on the left. You can collapse this by clicking the <span class="fa fa-angle-double-left"></span> icon.</p>
-                    <p>The main dialog has the item Title and Points (if Points were entered) in the header. The first section is colored to match the chosen item color and contains the complete description, followed by one row with the assignee, category (if the board has categories), and current lane for the item.</p>
+                    <p>The main dialog has the item Title and Points (if Points were entered) in the header. The first section is colored to match the chosen item color and contains the complete description, followed by one row with the assignee, category (if the board has categories), and current column for the item.</p>
                     <p>Beneath the item details are one or two buttons depending on the user level. The Edit button will open the item in an Edit Item dialog (much like the Add Item dialog). For admin users, there is also a Delete Item button. Deleting an item cannot be undone, so take care when using this feature. You will be asked to confirm deletion.</p>
                     <p>The next section displays any attachments associated with the item, followed by an input to allow uploading of an attachment.</p>
                     <p>The final section displays any comments on the item, and an input for adding a comment to the item.</p>

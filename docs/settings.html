@@ -123,7 +123,7 @@
             <div class="row">
                 <div class="col-sm-8">
                     <p>Board Settings is a table listing all the boards the user has access to (for admins, that's every board on the site).</p>
-                    <p>The Name column gives the name of the board as a link to the board itself. The Lanes column lists all lanes in the board, in order, with a badge on each showing the total count of items currently in that lane.</p>
+                    <p>The Name column gives the name of the board as a link to the board itself. The Columns column lists all columns in the board, in order, with a badge on each showing the total count of items currently in that column.</p>
                     <p>The Categories column lists any categories in the board, sorted alphabetically. The Users column lists all users assigned to the board (which includes all admins).</p>
                 </div>
                 <div class="col-sm-4">
@@ -144,10 +144,10 @@
                 <div class="col-sm-8">
                     <h3>Add Board<a name="addBoard"></a></h3>
                     <p>Click the Add Board button to open the modal dialog for creating a new board.</p>
-                    <p>There are only two requirements to create a new board. It must have a Name, and it must have at least one Lane. Categories are optional, but they can be helpful!</p>
+                    <p>There are only two requirements to create a new board. It must have a Name, and it must have at least one Column. Categories are optional, but they can be helpful!</p>
                     <p>The Select Users section allows you to select which users have access to the board.<span class="small note">Admin users always have access to all boards whether they are selected here or not.</span></p>
-                    <p>While adding or editing a board, lanes can be sorted by dragging them into the desired order. Lanes and categories can be renamed inline by clicking the edit icon (<span class="fa fa-edit"></span>). When editing inline, just hit <code>Enter</code> to accept the changes, or <code>Escape</code> to cancel.</p>
-                    <p>You can also delete a Lane or Category by clicking the trash can icon (<span class="fa fa-trash-o"></span>).</p>
+                    <p>While adding or editing a board, columns can be sorted by dragging them into the desired order. Columns and categories can be renamed inline by clicking the edit icon (<span class="fa fa-edit"></span>). When editing inline, just hit <code>Enter</code> to accept the changes, or <code>Escape</code> to cancel.</p>
+                    <p>You can also delete a Column or Category by clicking the trash can icon (<span class="fa fa-trash-o"></span>).</p>
                     <p>Click the Add Board button on the dialog when you have your board the way you want. You are returned to the Settings page assuming the two requirements for creating a board were met.</p>
                 </div>
                 <div class="col-sm-4">
@@ -158,7 +158,7 @@
             <div class="row">
                 <div class="col-sm-8">
                     <p>Automatic actions are a way to have items update automatically when specific criteria are met. All users see a list of automatic actions that are currently available. Admin users also see the Add Action section that allows creation of a new automatic action.</p>
-                    <p>The current implementation allows you to choose from three triggers for an item: moving to a lane, assignee change, and category change. There are four actions that can occur, however not all actions are available to each trigger. The actions that can run against an item are: set color, set category, set assignee, clear due date.</p>
+                    <p>The current implementation allows you to choose from three triggers for an item: moving to a column, assignee change, and category change. There are four actions that can occur, however not all actions are available to each trigger. The actions that can run against an item are: set color, set category, set assignee, clear due date.</p>
                     <p>The idea is that you can have things taken care of by TaskBoard. For example, say you use the Date Due to track active items; you can setup an automatic action to clear the due date when an item is moved into the Done column.</p>
                     <p>If you have ideas for improving the options, <a href="https://github.com/kiswa/TaskBoard/issues">post an issue</a> for consideration!</p>
                     <h3>Add Action</h3>
