@@ -92,7 +92,7 @@
                 <div class="col-md-12">
                     <p>Once you've downloaded TaskBoard, getting it running is very simple.</p>
                     <ol>
-                        <li>Copy the folders and files (you can skip the .hg* stuff) to the location you want to use TaskBoard.</li>
+                        <li>Copy the folders and files (you can skip the .hg* stuff) to the location you want to use TaskBoard accessible in your web server. If you are using Apache, this would typically be under .htaccess folder.</li>
                         <li>
                             <strong>Optional:</strong> Minify everything for better performance in production. (Requires that everything but <code>compiler.jar</code> in <code>build/</code> is executable.)
                             <ul>
@@ -103,6 +103,9 @@
                         <li>Open your browser to the location you put TaskBoard and log into the site with the username <code>admin</code> and password <code>admin</code>.</li>
                     </ol>
                     <p class="note">Ensure the <code>api</code> directory is writable so the back end can do its job.</p>
+                    <p class="note">If your web server is Apache, you typically need to check <code>httpd.conf</code> configuration file to ensure that the lines 
+                        <code>LoadModule expires_module modules/mod_expires.so</code> and <code>LoadModule rewrite_module modules/mod_rewrite.so</code> are not commented out. 
+                        If these lines start with a <code>#</code>, just remove the <code>#</code> character.</p>
                     <p>That's all you have to do. Simple, right? Now go log into TaskBoard!</p>
                     <p>If you have any troubles, <a href="https://github.com/kiswa/TaskBoard/issues">post an issue</a> and I'll help if I can.</p>
                 </div>
