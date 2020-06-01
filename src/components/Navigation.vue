@@ -196,6 +196,7 @@ nav {
         flex-direction: column;
         font-size: 1rem;
         left: 0;
+        padding: 0;
         position: absolute;
         right: 0;
         top: 58px;
